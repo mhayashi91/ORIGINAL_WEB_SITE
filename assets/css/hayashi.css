@@ -1,0 +1,335 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/IMG_0560.JPG'); 
+    background-size: cover; /* 背景画像を画面に合わせて拡大縮小 */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: rgba(255, 255, 255, 1.0); 
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.student-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96%; 
+    max-width: 900px; 
+    margin: 20px auto; 
+    background-color: rgba(255, 255, 255, 0.6); 
+  }
+
+  .student-image img {
+    max-width: 220px;
+    height: auto;
+    margin-left: 30px;
+  }
+  
+  .student-details h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .student-details h1 a {
+    margin-left: 15px; /* アイコンと名前の間隔 */
+    font-size: 1.5rem;
+    border: none;
+  }
+  
+  .fab.fa-facebook {
+    color: #1877F2; /* Facebookの青色 */
+  }
+
+  .fab.fa-instagram {
+    color: #E4405F; /* Instagramのピンク色 */
+  }
+
+  .fab {
+    font-size: 2.5rem; /* アイコンのサイズ */
+    color: blue;
+  }
+  
+
+  .student-details {
+    margin: 5%;
+  }
+  
+  .student-details p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .student-experience,
+  .future-goals,
+  .student-message {
+    margin: 20px;
+  }
+
+/*プロフィールレスポンシブ
+/* Add a media query for screens up to 768px width (typical mobile devices) */
+@media screen and (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .student-profile {
+    flex-direction: column;
+    align-items: center; /* Align content to the center */
+  }
+
+  .student-image img {
+    max-width: 70%;
+    margin: 0 auto; /* Center align the image */
+    display: block; /* Remove any inline spacing */
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .student-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .student-details h1 a {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  .fab {
+    font-size: 2rem;
+  }
+
+  .student-details {
+    margin: 5% 10% 5% 10%;
+  }
+
+  .student-experience,
+  .future-goals,
+  .student-message {
+    margin: 10px;
+  }
+
+  /* Update accordion styles for better mobile experience */
+  .accordion-area section {
+    border: 2px solid #ccc;
+    padding: 3%;
+  }
+
+  .title {
+    font-size: 20px;
+    padding: 3% 3% 3% 30px;
+  }
+
+  .title::before,
+  .title::after {
+    width: 10px;
+    height: 1px;
+  }
+
+  .box {
+    margin: 0 3% 10px 3%;
+    padding: 2%;
+  }
+}
+
+
+/* レスポンシブスタイル */
+@media screen and (max-width: 768px) {
+  .student-experience,
+  .future-goals,
+  .student-message {
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+}
+
+
+
+
+  CSS JSResult Skip Results Iframe
+  EDIT ON
+  @charset "UTF-8";
+  
+  /*==================================================
+  アコーディオンのためのcss
+  ===================================*/
+  
+  /*アコーディオン全体*/
+.accordion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ページの高さいっぱいにアコーディオンを配置 */
+    width: 100vw;
+  }
+  
+
+  .accordion-area{
+      list-style: none;
+      width: 96%;
+      max-width: 900px;
+      margin:0 auto;
+  }
+  
+  .accordion-area li{
+      margin: 10px 0;
+      list-style: none;
+  }
+  
+  .accordion-area section {
+    border: 4px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明の白色背景 (色と透明度を調整) */
+  }
+  
+  /*アコーディオンタイトル*/
+  .title {
+      position: relative;
+      cursor: pointer;
+      font-size:25px;
+      font-weight: normal;
+      padding: 3% 3% 3% 50px;
+      transition: all .5s ease;
+  }
+  
+  /*アイコンの＋と×*/
+  .title::before,
+  .title::after{
+      position: absolute;
+      content:'';
+      width: 15px;
+      height: 2px;
+      background-color: #333;
+      content: none; /* 擬似要素の内容を非表示にする */
+  }
+  .title::before{
+      top:48%;
+      left: 15px;
+      transform: rotate(0deg);
+  }
+  .title::after{    
+      top:48%;
+      left: 15px;
+      transform: rotate(90deg);
+  }
+  /*　closeというクラスがついたら形状変化　*/
+  .title.close::before{
+    transform: rotate(45deg);
+  }
+  
+  .title.close::after{
+    transform: rotate(-45deg);
+  }
+  
+  /*アコーディオンで現れるエリア*/
+  .box {
+      display: none;/*はじめは非表示*/
+      background: #f3f3f3;
+    margin:0 3% 3% 3%;
+      padding: 3%;
+  }
+  
+  /*========= レイアウトのためのCSS ===============*/
+  h2{
+      text-align: center;
+      margin: 30px 0;
+      font-size:1rem;
+  }
+
+  /*========= note部分 ===============*/
+  .blog-link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    position: relative;
+  }
+
+  .blog-link-button i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .blog-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .blog-list li {
+    margin-top: 10px;
+  }
+
+.blog-icon {
+    width: 120px; /* 画像の幅 */
+    height: 70px; /* 画像の高さ */
+    object-fit: contain; /* 画像がコンテナに収まるように */
+    margin-right: 10px; /* 画像とテキストの間隔 */
+    vertical-align: middle; /* 画像とテキストの高さを揃える */
+  }
+  
+  
+#note {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: azure;
+    margin-bottom: 10px;
+}
+
+/* スタイルを追加 */
+.flex-container {
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    align-items: flex-start; /* 上端揃え */
+  }
+  
+  .flex-item {
+    margin: 30px 60px; /* アイテム間の余白 */
+  }
+
+/*noteレスポンシブ
+/* Add a media query for screens up to 768px width (typical mobile devices) */
+@media screen and (max-width: 768px) {
+  .blog-list li {
+    display: block; /* Change list items to stack vertically */
+  }
+
+  .flex-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+  }
+
+  .flex-item {
+    margin: 10px 0; /* Adjust margin between items */
+  }
+
+  .blog-link-button {
+    width: 50%; /* Adjust button width for better mobile appearance */
+  }
+
+  .blog-icon {
+    width: 60px; /* Adjust icon size for mobile */
+    height: 40px;
+  }
+
+  #note {
+    font-size: 18px; /* Decrease font size for mobile */
+    margin-bottom: 5px;
+  }
+}
+
+  
+  

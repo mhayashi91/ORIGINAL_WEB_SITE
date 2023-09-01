@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgakuseiRyugaku</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <p><i class="fas fa-stethoscope fa-2x"></i></p>
+        </div>
+        <button class="hamburger-menu" id="js-hamburger-menu">
+            <span class="hamburger-menu__bar"></span>
+            <span class="hamburger-menu__bar"></span>
+            <span class="hamburger-menu__bar"></span>
+        </button>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__list-item"><a href="#video-bg" class="navigation__link">トップページ</a></li>
+                <li class="navigation__list-item"><a href="#taikennki" class="navigation__link">留学体験記</a></li>
+                <li class="navigation__list-item"><a href="mailto:mhayashi91@gmail.com" class="navigation__link">コンタクト</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="title">
+            <ul class="guideline">
+                <li>地方医学生に</li>
+                <li>長期留学という</li>
+                <li>選択肢を</li>
+            </ul>
+        </section>
+        <video autoplay muted loop id="video-bg">
+            <source src="./assets/movie/IMG_5099-3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <a href="./hayashi.html" class="profile-button" id="taikennki">
+                <img src="./assets/img/IMG_5133 2.png" alt="プロフィール写真" class="profile-image">
+            </a>
+            <!-- <span class="profile-name">林舞佳</span> -->
+            <p class="profile-message"></p>
+            <a href="./kazusa.html" class="profile-button">
+                <img src="assets/img/IMG_2660.png" alt="プロフィール写真" class="profile-image">
+            </a>
+            <!-- <span class="profile-name">広兼和沙</span> -->
+        </div>
+    </main>
+    <footer>
+        <span class="to-top-button" id="js-to-top-button">
+            <img src="./assets/img/0208000076.png" alt="トップへ戻る" style="width: 100%; height: 100%;">
+        </span>
+        <div class="banner">
+            <a href="https://tobitate.mext.go.jp/" class="footer-link banner logo-link">
+                <img src="./assets/img/logo.png" alt="バナー">
+            </a>
+            <a href="https://kokusai.shimane-u.ac.jp/" class="footer-link banner logo-link">
+                <img src="./assets/img/header_uni.jpg" alt="バナー">
+            </a>
+        </div>
+        <span class="copyright">&copy; 2023 Igakusei-Ryugaku</span>
+        <a href="mailto:mhayashi91@gmail.com" class="footer-link contact">
+            <i class="fas fa-envelope fa-lg"></i>
+            <p>Contact</p>
+        </a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

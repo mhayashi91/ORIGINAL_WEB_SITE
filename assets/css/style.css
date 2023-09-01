@@ -1,0 +1,369 @@
+/* Reset some default styling */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(52, 152, 219, 0.9); /* ヘッダーの背景色を設定 */
+  color: #fff; /* ヘッダーのテキストカラーを設定 */
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-left {
+  font-size: 24px;
+}
+
+.hamburger-menu {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 100px;
+}
+
+.hamburger-menu__bar {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+.navigation {
+  display: none;
+  background-color: rgba(52, 152, 219, 0.9);/* ナビゲーションメニューの背景色を設定 */
+  position: absolute;
+  top: 60px;
+  width: 30%;
+  z-index: 9999;
+  right: 0;
+}
+
+.navigation__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__list-item {
+  border-bottom: solid 1px #2e7bb4;
+}
+
+.navigation__list-item:first-child {
+  border-top: solid 1px #2e7bb4;
+}
+
+.navigation__link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.navigation__link:hover {
+  background: #2e7bb4;
+}
+
+
+/* ナビゲーションメニューのスタイルを調整 */
+.navigation {
+  @media screen and (max-width: 780px) {
+    width: 100vw;
+    height: calc(100vh - 700px); 
+    top: 60px; 
+  }
+}
+
+.navigation__list-item {
+  @media screen and (max-width: 780px) {
+    width: 100%;
+  }
+}
+
+.navigation__link {
+  @media screen and (max-width: 780px) {
+    padding: 15px 20px; 
+  }
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+video#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* ビデオを背景に配置するためのZインデックス */
+}
+
+.welcome {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width:780px) {
+  .welcome {
+      height: 40vh;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 70px;
+  color: #fff;
+  padding: 30px;
+}
+
+.guideline {
+  font-size: 70px;
+  font-weight: bold;
+  text-align: right;
+}
+
+@media screen and (max-width:780px) {
+  .title{
+      font-size: 28px;
+  }
+  .guideline{
+      font-size: 22px;
+  }
+}
+
+.guideline > li {
+  margin-top: 20px;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50vh; /* ボタンをメインページの下あたりに配置 */
+  transform: translateY(-50%); /* マージンの半分の高さを上に移動して中央に配置 */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  text-align: center;
+}
+
+/* 以前のコードをそのまま含めてください */
+
+
+.profile-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(25% - 20px);
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  margin: 0;
+  border: 2px solid #fff;
+  position: relative;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.profile-name {
+  font-size: 18px;
+  margin-top: 10px; /* 名前とボタンの間隔を設定 */
+  position: absolute; /* 絶対位置を設定 */
+  bottom: -30px; 下方向に-30pxの余白を設定
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.profile-message {
+  font-size: 40px;
+  padding-bottom: 120px; /* メッセージとボタンの間隔を設定 */
+  text-align: center; /* メッセージを中央揃えにする */
+  color: #fff;
+  margin-top: 80px;
+}
+
+
+.profile-button:hover {
+  transform: scale(0.95);
+}
+
+.profile-button:active {
+  transform: scale(1);
+}
+
+/* フッターのスタイル */
+footer {
+  background-color: rgba(52, 152, 219, 0.9);  /* ヘッダーと同じ背景色 */
+  color: #fff; /* ヘッダーと同じテキストカラー */
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between; /* 子要素を均等に配置 */
+  align-items: center; /* 垂直方向に中央に配置 */
+  position: relative;
+}
+
+
+/* フッター内のリンクスタイル */
+.footer-link.contact {
+  margin-left: auto; /* コンタクトページを右側に寄せる */
+  margin-right: 15px; /* 右側の余白を設定 */
+}
+
+/* 他のスタイル定義 */
+
+/* トップへ戻るボタンのスタイル */
+.to-top-button {
+  position: absolute; /* 絶対位置指定に変更 */
+  bottom: 20px;
+  left: 20px;
+  background-color: #fff;
+  color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.to-top-button:hover {
+  background-color: aquamarine;
+}
+
+/* バナーのスタイル */
+.banner {
+  display: inline-block;
+  margin-left: 60px;
+}
+
+.logo-link img {
+  width: 130px; /* 例として適切な幅を設定 */
+  height: auto; /* 高さは幅に合わせて自動調整されます */
+}
+
+.copyright {
+  position: absolute; /* 絶対位置を指定 */
+  left: 50%; /* フッターの中央に配置するために左側から50%に配置 */
+  transform: translateX(-50%); /* 左側から50%ずらして中央に配置 */
+}
+
+/* ボタンのレスポンシブ */
+@media screen and (max-width: 780px) {
+  .title {
+    font-size: 28px;
+  }
+  .guideline {
+    font-size: 22px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90vh; /* マージンを大きくし、メインページの下部に配置 */
+  }
+  .profile-button {
+    width: 200px; /* 一般的なサイズを設定 */
+    height: 200px; /* 一般的なサイズを設定 */
+    margin: 60px 0; /* ボタンの間隔を調整 */
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid #fff;
+    position: relative;
+  }
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .profile-name {
+    font-size: 14px;
+    margin-top: 5px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+/* メディアクエリによって画面幅に応じてテキストを切り替える */
+@media screen and (min-width: 780px) {
+  .profile-message::before {
+    content: "← ボタンをクリック →";
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .profile-message::before {
+    content: "↑ ボタンをクリック ↓";
+  }
+}
+
+/*レスポンシブフッター*/
+@media screen and (max-width: 780px) {
+  footer {
+    flex-direction: column; /* 要素を縦に配置するためにフレックス方向を変更 */
+    align-items: center; /* 要素を中央に配置 */
+  }
+
+  /* フッター内のリンクスタイルを調整 */
+  .footer-link {
+    margin: 30px 0px 0px 0px; /* 上下方向の余白を追加 */
+    padding-right: 40px;
+    left: 10px;
+    flex-basis: auto; /* 要素の幅を自動に設定 */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
